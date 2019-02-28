@@ -8,9 +8,9 @@ require('src/EDI/Skeleton.php');
 
 use PHPProceda\Proceda;
 
-$file = __DIR__.'/MODELO-OCURREN.txt';
+// $file = __DIR__.'/MODELO-OCURREN.txt';
 
-$proceda = new Proceda($file);
+// $proceda = new Proceda($file);
 
 $datafull = date('dmyHi');
 $datames = date('dmHi');
@@ -37,6 +37,10 @@ $meio_transporte = 1;
 $tipo_transporte_carga = 1;
 $tipo_carga = 1;
 $condicao_frete = 'CIF';
+
+$file = __DIR__ . '/OCO' . $datafull . '.txt';
+
+$proceda = new Proceda($file);
 
 $params = array(
   '000' => array(
